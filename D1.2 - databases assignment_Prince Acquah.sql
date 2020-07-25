@@ -36,7 +36,7 @@ FROM agent_transactions AS atx LEFT OUTER JOIN agents AS ag ON
 atx.atx_id = ag.agent_id
 WHERE atx.when_created BETWEEN NOW()::DATE-EXTRACT(DOW FROM NOW())::INTEGER-7
 AND NOW()::DATE-EXTRACT(DOW FROM NOW())::INTEGER
-GROUP BY ag.city
+GROUP BY ag.city;
 
 
 --Q. 7
